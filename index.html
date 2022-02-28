@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!-- Made by Amey -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>A word</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script src="a_word.js"></script>
+</head>
+
+<body onload="aWord()">
+    <div class="container">
+        <div class="wordle-container">
+            <div class="game">
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+                <div class="row">
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                    <div class="letter" state="empty" animation="none"></div>
+                </div>
+            </div>
+        </div>
+        <div class="keyboard">
+            <div class="keyRow">
+                <button id="q" onclick="buttonPressed('q')">q</button>
+                <button id="w" onclick="buttonPressed('w')">w</button>
+                <button id="e" onclick="buttonPressed('e')">e</button>
+                <button id="r" onclick="buttonPressed('r')">r</button>
+                <button id="t" onclick="buttonPressed('t')">t</button>
+                <button id="y" onclick="buttonPressed('y')">y</button>
+                <button id="u" onclick="buttonPressed('u')">u</button>
+                <button id="i" onclick="buttonPressed('i')">i</button>
+                <button id="o" onclick="buttonPressed('o')">o</button>
+                <button id="p" onclick="buttonPressed('p')">p</button>
+            </div>
+            <div class="keyRow">
+                <div class="halfSpace"></div>
+                <button id="a" onclick="buttonPressed('a')">a</button>
+                <button id="s" onclick="buttonPressed('s')">s</button>
+                <button id="d" onclick="buttonPressed('d')">d</button>
+                <button id="f" onclick="buttonPressed('f')">f</button>
+                <button id="g" onclick="buttonPressed('g')">g</button>
+                <button id="h" onclick="buttonPressed('h')">h</button>
+                <button id="j" onclick="buttonPressed('j')">j</button>
+                <button id="k" onclick="buttonPressed('k')">k</button>
+                <button id="l" onclick="buttonPressed('l')">l</button>
+                <div class="halfSpace"></div>
+                
+            </div>
+            <div class="keyRow">
+                <button class="specialBut" onclick="buttonPressed('ENTER')">ENTER</button>
+                <button id="z" onclick="buttonPressed('z')">z</button>
+                <button id="x" onclick="buttonPressed('x')">x</button>
+                <button id="c" onclick="buttonPressed('c')">c</button>
+                <button id="v" onclick="buttonPressed('v')">v</button>
+                <button id="b" onclick="buttonPressed('b')">b</button>
+                <button id="n" onclick="buttonPressed('n')">n</button>
+                <button id="m" onclick="buttonPressed('m')">m</button>
+                <button class="specialBut" onclick="buttonPressed('<---')">&lt---</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

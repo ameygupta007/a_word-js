@@ -1,0 +1,163 @@
+:root {
+    --correct-color: rgb(0, 143, 0);
+    --empty-color: #3a3a3c;
+    --present-color: #b59f3b;
+    --absent-color: #3a3a3c;
+    --tbd-color: #565758;
+    --key-color: #797979;
+}
+
+body {
+    background: #121213;
+    font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+}   
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+.row {
+    user-select: none;
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+}
+.letter {
+
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    width: 8vh;
+    height: 8vh;
+    font-size: 2rem;
+    line-height: 2rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: aliceblue;
+    text-transform: uppercase;
+    user-select: none;
+}
+.letter[state="correct"]{
+    border: 2px solid var(--correct-color);
+    background-color: var(--correct-color);
+}
+.letter[state="empty"]{
+    border: 2px solid var(--empty-color);
+}
+.letter[state="present"]{
+    border: 2px solid var(--present-color);
+    background-color: var(--present-color);
+}
+.letter[state="absent"]{
+    border: 2px solid var(--absent-color);
+    background-color: var(--absent-color);
+}
+.letter[state="tbd"]{
+    border: 2px solid var(--tbd-color);
+}
+.letter[animation="pop"]{
+    animation-name: popIn;
+    animation-duration: 100ms;
+}
+@keyframes popIn {
+	from {
+		transform: scale(0.8);
+        opacity: 0;
+	}
+
+    40% {
+    	transform: scale(1.1);
+        opacity: 1;
+    }
+  }
+.letter[animation="flipOut"]{
+    animation-name: flipOut;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+}
+@keyframes flipOut {
+    0%{
+        transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+    
+}
+.wordle-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.game {
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing:border-box;
+}
+.keyboard {
+    margin: 0 8px;
+    user-select: none;
+}
+.keyRow {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+    justify-content: center;
+    user-select: none;
+}
+button {
+    display: flex;
+    border: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 58px;
+    font-weight: bold;
+    color: aliceblue;
+    text-transform: uppercase;
+    user-select: none;  
+    background-color: var(--key-color);
+    border-radius: 4px;
+    margin: 0 6px 0 0;
+    cursor: pointer;
+}
+button[state="green"]{
+    background-color: var(--correct-color);
+}
+button[state="yellow"]{
+    background-color: var(--present-color);
+}
+button[state="tried"]{
+    background-color: var(--absent-color);
+}
+
+.specialBut {
+    width: 63px;
+    font-size: 12px
+}
+.halfSpace {
+    display: block;
+    width: 21px;
+    height: 58px;
+}
