@@ -111,7 +111,7 @@ function checkGuess(word) {
         out.fill("correct");
         green = word;
         setTimeout(function () { guess = 6; }, 500);
-        // alert('Well done! You got it in ' + guess + ' tries!');
+        alert('Well done! You got it in ' + guess + ' tries!');
     } else {    
         let count = 0;
         while (count < word.length) {
